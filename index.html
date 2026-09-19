@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+  yuritiutvin.github.io
+  Plain HTML and CSS. No framework, no build step. Edit this file directly.
+
+  To add a project: copy one <article class="card"> block, paste it into the
+  right theme section, and update the six fields. Uncomment a theme section
+  once it has a card in it. Thumbnails go in img/ at about 800 px wide.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yuri (Iurii) Tiutvin — electrical engineering projects</title>
+<meta name="description" content="Electrical engineering projects by Yuri (Iurii) Tiutvin: embedded firmware, discrete logic, battery power and bench measurement.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <h1>Yuri (Iurii) Tiutvin</h1>
+  <p class="focus">Embedded, firmware and hardware. I build instruments and measure whether they work.</p>
+  <p class="meta">Electrical engineering, UC Davis &middot; graduating June 2027 &middot; San Jose, CA</p>
+  <p class="links">
+    <a href="mailto:itiutvin@gmail.com">itiutvin@gmail.com</a>
+    <a href="https://github.com/YuriTiutvin">GitHub</a>
+  </p>
+</header>
+
+<main>
+
+  <section class="theme">
+    <h2>Embedded and firmware</h2>
+
+    <article class="card">
+      <a class="thumb" href="https://github.com/YuriTiutvin/reaction-time-game">
+        <img src="img/reaction-time-game.jpg"
+             alt="Reaction Time Game running on battery with all five start lights lit"
+             width="800" height="600" loading="lazy">
+      </a>
+      <div class="body">
+        <h3><a href="https://github.com/YuriTiutvin/reaction-time-game">Reaction Time Game</a></h3>
+        <p class="summary">Five-light reaction timer on an RP2040. A discrete 74HC00 SR latch debounces
+          the button in hardware, so the firmware timestamps one clean edge.</p>
+        <p class="result">Median 202&nbsp;ms over 30 rounds &middot; timer verified against an oscilloscope at +6.4&nbsp;ms bias</p>
+        <ul class="tags">
+          <li>MicroPython</li>
+          <li>Interrupt timing</li>
+          <li>Discrete logic</li>
+          <li>LiPo power</li>
+          <li>Oscilloscope</li>
+        </ul>
+        <p class="actions">
+          <a class="btn" href="https://github.com/YuriTiutvin/reaction-time-game">Repository</a>
+          <a class="btn ghost" href="https://github.com/YuriTiutvin/reaction-time-game/blob/main/docs/reaction-time-game-onepager.pdf">One-page PDF</a>
+        </p>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- Uncomment once this theme has a project.
+  <section class="theme">
+    <h2>RF and measurement</h2>
+  </section>
+
+  <section class="theme">
+    <h2>Instrumentation</h2>
+  </section>
+  -->
+
+</main>
+
+<footer>
+  <p>Built as plain HTML and CSS. Source: <a href="https://github.com/YuriTiutvin/YuriTiutvin.github.io">YuriTiutvin.github.io</a></p>
+</footer>
+
+<!--
+  CARD TEMPLATE — copy, paste, replace the capitalised parts.
+
+  <article class="card">
+    <a class="thumb" href="REPO_URL">
+      <img src="img/SLUG.jpg" alt="DESCRIPTIVE ALT TEXT" width="800" height="600" loading="lazy">
+    </a>
+    <div class="body">
+      <h3><a href="REPO_URL">PROJECT NAME</a></h3>
+      <p class="summary">TWENTY-FIVE WORD SUMMARY.</p>
+      <p class="result">HEADLINE MEASURED RESULT</p>
+      <ul class="tags">
+        <li>SKILL</li><li>SKILL</li><li>SKILL</li>
+      </ul>
+      <p class="actions">
+        <a class="btn" href="REPO_URL">Repository</a>
+        <a class="btn ghost" href="REPO_URL/blob/main/docs/SLUG-onepager.pdf">One-page PDF</a>
+      </p>
+    </div>
+  </article>
+-->
+
+</body>
+</html>
