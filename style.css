@@ -1,0 +1,166 @@
+/* yuritiutvin.github.io — plain CSS, no build step.
+   Palette matches portfolio-standards.md: accent #1F3A5F, grey #6E6E6E,
+   rule #D8D8D8, stripe #F4F6F9. */
+
+:root {
+  --accent: #1F3A5F;
+  --grey: #6E6E6E;
+  --rule: #D8D8D8;
+  --stripe: #F4F6F9;
+  --text: #17181A;
+  --bg: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #9FC0E8;
+    --grey: #9A9A9A;
+    --rule: #33373D;
+    --stripe: #1A1D21;
+    --text: #E8E9EB;
+    --bg: #101214;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 1.25rem 4rem;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.masthead, main, footer { max-width: 860px; margin: 0 auto; }
+
+/* ---------- masthead ---------- */
+
+.masthead { padding: 3.5rem 0 1.75rem; border-bottom: 2px solid var(--accent); }
+
+.masthead h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+}
+
+.focus { margin: 0.6rem 0 0; font-size: 1.05rem; }
+
+.meta { margin: 0.35rem 0 0; color: var(--grey); font-size: 0.92rem; }
+
+.links { margin: 0.9rem 0 0; font-size: 0.95rem; }
+.links a { margin-right: 1.1rem; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- theme sections ---------- */
+
+.theme { margin-top: 2.75rem; }
+
+.theme h2 {
+  margin: 0 0 1.25rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--grey);
+}
+
+/* ---------- project card ---------- */
+
+.card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--bg);
+  margin-bottom: 1.5rem;
+}
+
+.card + .card { margin-top: 0; }
+
+.thumb { display: block; }
+
+.thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+}
+
+.card h3 { margin: 0 0 0.45rem; font-size: 1.22rem; }
+.card h3 a { color: var(--text); }
+.card h3 a:hover { color: var(--accent); }
+
+.summary { margin: 0 0 0.7rem; }
+
+.result {
+  margin: 0 0 0.9rem;
+  padding: 0.5rem 0.7rem;
+  background: var(--stripe);
+  border-left: 3px solid var(--accent);
+  border-radius: 3px;
+  font-size: 0.93rem;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.tags li {
+  font-size: 0.79rem;
+  color: var(--grey);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+}
+
+.actions { margin: 0; }
+
+.btn {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.38rem 0.85rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.88rem;
+}
+
+.btn:hover { text-decoration: none; opacity: 0.9; }
+
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* ---------- footer ---------- */
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--grey);
+  font-size: 0.85rem;
+}
+
+/* ---------- narrow screens ---------- */
+
+@media (max-width: 680px) {
+  .card { grid-template-columns: 1fr; gap: 1rem; }
+  .masthead { padding-top: 2.5rem; }
+  .masthead h1 { font-size: 1.7rem; }
+}
