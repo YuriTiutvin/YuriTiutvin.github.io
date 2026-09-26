@@ -21,8 +21,8 @@
   <h1>Yuri (Iurii) Tiutvin</h1>
   <p class="focus">Electrical engineering senior at UC Davis, graduating June&nbsp;2027 and based in San&nbsp;Jose,
     looking for full-time roles in embedded systems, firmware, hardware and test engineering.</p>
-  <p class="about">This portfolio collects projects I designed, built and tested outside of coursework.
-    Each one links to its full documentation &mdash; schematics, source code, design decisions and bench
+  <p class="about">This portfolio collects projects I designed, built and tested outside of coursework,
+    spanning embedded firmware and digital signal processing. Each one links to its full documentation &mdash; schematics, source code, design decisions and bench
     measurements &mdash; so the work can be checked, not just described.</p>
   <p class="links">
     <a href="mailto:itiutvin@gmail.com">itiutvin@gmail.com</a>
@@ -34,6 +34,40 @@
 
   <section class="theme">
     <h2>Embedded and firmware</h2>
+
+    <article class="card">
+      <a class="thumb" href="https://github.com/YuriTiutvin/audio-spectrum-visualizer">
+        <img src="img/audio-spectrum-visualizer.jpg"
+             alt="Audio Spectrum Visualizer on a desk: three stacked circuit boards with red, yellow and green LED bars lit at different heights"
+             width="800" height="600" loading="lazy">
+      </a>
+      <div class="body">
+        <h3><a href="https://github.com/YuriTiutvin/audio-spectrum-visualizer">Audio Spectrum Visualizer</a></h3>
+        <p class="summary">A desk light display for anyone who likes to see their music: it listens to the room
+          and shows the bass, mids and treble of whatever is playing as three moving LED bars. An ESP32
+          microcontroller runs the frequency analysis and drives three LED bar-graph chips through filtered
+          PWM signals.</p>
+        <p class="result">Checked on the bench: LED driver switching points measured with a multimeter on three
+          chips (equal 0.33&nbsp;V steps); supply current 71&ndash;238&nbsp;mA at 5&nbsp;V; the 10&nbsp;kHz control
+          signal confirmed filtered to a steady level on an oscilloscope.</p>
+        <ul class="tags">
+          <li>Embedded systems</li>
+          <li>Firmware</li>
+          <li>Circuit design</li>
+          <li>ESP32 (Espressif microcontroller)</li>
+          <li>C++ (Arduino)</li>
+          <li>Signal processing (FFT)</li>
+          <li>Analog circuits</li>
+          <li>Prototyping &amp; soldering</li>
+          <li>Test &amp; measurement</li>
+          <li>Oscilloscope</li>
+        </ul>
+        <p class="actions">
+          <a class="btn" href="https://github.com/YuriTiutvin/audio-spectrum-visualizer">Repository</a>
+          <a class="btn ghost" href="https://github.com/YuriTiutvin/audio-spectrum-visualizer/blob/main/docs/audio-spectrum-visualizer-onepager.pdf">One-page PDF</a>
+        </p>
+      </div>
+    </article>
 
     <article class="card">
       <a class="thumb" href="https://github.com/YuriTiutvin/reaction-time-game">
